@@ -59,6 +59,8 @@ class UserHandler {
             $user->work = $data['work'];
             $user->avatar = $data['avatar'];
             $user->cover = $data['cover'];
+            $user->email = $data['email'];
+
 
             if($full) {
                 $user->followers = [];

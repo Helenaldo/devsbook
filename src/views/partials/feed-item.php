@@ -18,7 +18,7 @@
                         break;
                 }
                 ?>
-                fez um post</span>
+                </span>
                 <br/>
                 <span class="fidi-date">
                     <?=date('d/m/Y', strtotime($data->created_at)); ?>
@@ -29,7 +29,18 @@
             </div>
         </div>
         <div class="feed-item-body mt-10 m-width-20">
-            <?=nl2br($data->body);?>
+
+            <?php
+            switch($data->type) {
+            case 'text':
+                echo nl2br($data->body);
+            break;
+            case 'photo':
+                echo '<img src="'.$base.'/media/uploads/'.$data->body.'"/>';
+            break;
+            }        
+            ?>
+
         </div>
         <div class="feed-item-buttons row mt-20 m-width-20">
             <div class="like-btn <?=($data->liked ? 'on':'');?>"><?=$data->likeCount;?></div>
@@ -37,6 +48,7 @@
         </div>
         <div class="feed-item-comments">
             <div class="feed-item-comments-area">
+
                 <?php foreach($data->comments as $item): ?>
                     <div class="fic-item row m-height-10 m-width-20">
                         <div class="fic-item-photo">
@@ -48,6 +60,7 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
+                
             </div>
             <div class="fic-answer row m-height-10 m-width-20">
                 <div class="fic-item-photo">
