@@ -18,6 +18,7 @@ $router->post('/login', 'LoginController@signinAction');
 $router->post('/cadastro', 'LoginController@signupAction');
 
 $router->post('/post/new', 'PostController@new');
+$router->get('/post/{id}/delete', 'PostController@delete');
 
 
 //rotas para acessar o perfil do usuário logado e de outro usuário. Ou para seguir/deixar de seguir

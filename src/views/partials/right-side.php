@@ -6,8 +6,8 @@
         </div>
     </div>
     <div class="box-body">
-        <a href=""><img src="<?=$base; ?>/assets/images/php.png" /></a>
-        <a href=""><img src="<?=$base; ?>/assets/images/laravel.png" /></a>
+        <a href="http://www.helenaldo.com.br" target="_blank"><img src="<?=$base; ?>/assets/images/helenaldo.png" /></a>
+        <a href="http://www.gconte.com.br" target="_blank"><img src="<?=$base; ?>/assets/images/gconte.png" /></a>
     </div>
 </div>
 <div class="box">
